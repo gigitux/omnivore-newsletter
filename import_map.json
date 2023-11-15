@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@deps": "./deps.ts",
+    "@env": "./env.ts",
+    "@mailer": "./mailer/mod.ts",
+    "@omnivoreClient": "./omnivore-client/mod.ts"
+  }
+}
