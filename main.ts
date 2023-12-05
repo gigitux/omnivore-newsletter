@@ -9,9 +9,13 @@ if (import.meta.main) {
   const username = user.me.profile.username;
   const articles = await getArticles();
 
+  if (articles.search.edges.length === 0) {
+    Deno.exit(0);
+  }
+
   const article = await getArticle({
     username: username,
-    slug: articles.search.edges[0].node.slug,
+    slug: articles.search.edges[0]?.node.slug,
     includeFriendsHighlights: false,
   });
 
